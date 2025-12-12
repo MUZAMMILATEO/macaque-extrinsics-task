@@ -11,14 +11,25 @@ The primary output of this process is the file: `extrinsics_result.json`.
 The required environment is defined in the `environment.yml` file, ensuring perfect reproducibility across machines.
 
 ```bash
-cd path/to/root/folder/                 # navigate to project dir
+cd path/to/project/folder/              # navigate to project dir
 conda env create -f environment.yml     # create conda env
 conda activate calib_task               # activate conda env
 ```
 
-## 2. Execution
+## 2. Data
+The script requires two input files in the project root:
+`intrinsics.json` and `observations.json`
 
-To run the calibration, ensure `intrinsics.json` and `observation.json` are in the project folder, and then execute the main script:
+**Action Required:** Use the provided files for the initial result, or replace them with new calibration data for a subsequent run. The format must match the original structure.
+
+
+## 3. Execution
+
+With the environment active and data files in place, execute the main script:
 
 ```bash
 python calibrate_extrinsics.py
+```
+
+The script will generate the output file `extrinsics_result.json`.
+
