@@ -41,7 +41,7 @@ The file `extrinsics_result.json` contains the pose (position and orientation) o
 
 ### A. The Coordinate System
 
-* The **World Coordinate System** ($\mathbf{X}_W, \mathbf{Y}_W, \mathbf{Z}_W$) is defined by the 3D points in the `observation.json`. Since the $Z$ coordinate is $3.0$ for all points, the checkerboard is placed in the plane $Z=3.0$ meters.
+* The **World Coordinate System** ($\mathbf{X}_W, \mathbf{Y}_W, \mathbf{Z}_W$) is defined by the 3D points in the `observations.json`. Since the $Z$ coordinate is $3.0$ for all points, the checkerboard is placed in the plane $Z=3.0$ meters.
 * The **Camera Coordinate System** ($\mathbf{X}_C, \mathbf{Y}_C, \mathbf{Z}_C$) has its origin at the camera's optical center.
 
 ### B. Key Outputs
@@ -56,7 +56,7 @@ The `extrinsics_result.json` provides the components of this relationship for ea
 | :--- | :--- | :--- |
 | **`rotation_matrix_R`** | The $3 \times 3$ rotation matrix. It describes the camera's orientation (or how to rotate a world point to be aligned with the camera's axes). | Dimensionless |
 | **`translation_vector_t`** | The $3 \times 1$ translation vector. It is the position of the world origin ($\mathbf{X}_W=[0,0,0]$) expressed in the camera's coordinate system. | Meters (m) |
-| **`T_homogeneous_matrix_4x4`** | The complete $4 \times 4$ extrinsic transformation matrix, $[R | t]$, used for homogeneous coordinate transformations. | Mixed (Dimensionless and Meters) |
+| **`T_homogeneous_matrix_4x4`** | The complete $4 \times 4$ extrinsic transformation matrix, $[R : t]$, used for homogeneous coordinate transformations. | Mixed (Dimensionless and Meters) |
 
 ### C. Example Interpretation (Cam0)
 
