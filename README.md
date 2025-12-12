@@ -16,16 +16,6 @@ conda env create -f environment.yml     # create conda env
 conda activate calib_task               # activate conda env
 ```
 
-1.  **Navigate** to the project directory.
-2.  **Create and activate** the environment using Conda:
-    ```bash
-    # Creates 'calib_env' and installs all dependencies (Python 3.10, NumPy, OpenCV)
-    conda env create -f environment.yml
-    
-    # Activates the environment
-    conda activate calib_env
-    ```
-
 ## 2. Execution
 
 To run the calibration, ensure `intrinsics.json` and `observation.json` are in the project folder, and then execute the main script:
