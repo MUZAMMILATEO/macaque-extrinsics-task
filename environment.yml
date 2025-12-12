@@ -1,0 +1,15 @@
+name: calib_task # The name of the environment
+channels:
+  - conda-forge # Prioritizing conda-forge for robust, optimized packages
+  - defaults
+dependencies:
+  # Core Python version
+  - python=3.10
+  
+  # Core scientific libraries for array manipulation and PnP
+  - numpy
+  - opencv # Installs the required OpenCV package
+  
+  # Libraries needed for parsing JSON (standard in python)
+  - pip:
+    # No pip packages strictly needed for the core task, but we keep it for structure.
