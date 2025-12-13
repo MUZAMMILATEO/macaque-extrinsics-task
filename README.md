@@ -68,5 +68,5 @@ Looking at the output for `cam0`:
 
 * **Camera Pose in the Common World Coordinate System**
     * To obtain the camera pose (position and orientation) in the common world coordinate system, the extrinsic transformation must be inverted.
-    * The camera centre in world coordinates is given by: $${C}_W = -{R}^T t $$. For Cam0, this yields: `$${C}_W \approx (-1.692, -1.956, 5.646) m$$`
+    * The camera centre in world coordinates is given by: $${C}_W = -{R}^T t $$. For Cam0, this yields: $${C}_W \approx (-1.692, -1.956, 5.646) m$$
     * This means: Cam0 is located at approximately `(−1.69,−1.96,5.65)` metres in the same world coordinate system used by points_3d.
