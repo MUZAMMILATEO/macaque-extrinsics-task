@@ -61,7 +61,5 @@ The `extrinsics_result.json` provides the components of this relationship for ea
 ### C. Example Interpretation (Cam0)
 
 Looking at the output for `cam0`:
-* **Translation $\mathbf{t}$:** `[-0.009, 2.096, 5.846]`
-    * This means the World Origin $[0, 0, 0]$ is located at $X \approx 0 \text{m}$, $Y \approx 2.10 \text{m}$, and $Z \approx 5.85 \text{m}$ in *Cam0's frame*.
-    * Since the checkerboard (the reference for $R$ and $t$) was placed at $Z=3.0$ meters, a large $Z$ translation value ($\approx 5.85$) is reasonable, indicating the camera is positioned significantly further back from the calibration plane than the calibration plane is from the origin of the world coordinate system.
-
+* **Meaning of the Reported Translation Vector t**
+    * The extrinsics in extrinsics_result.json follow OpenCV’s solvePnP convention: $$\mathbf{X}_C = R \mathbf{X}_W + t$$ Therefore, the translation vector `t = [-0.009, 2.096, 5.846]` does not directly represent the camera position in the world coordinate system Instead, it means: The world origin [0,0,0] is located at approximately $X \approx -0.009 \text{m}$, $Y \approx 2.10 \text{m}$, and $Z \approx 5.85 \text{m}$ expressed in Cam0’s camera coordinate frame. This corresponds to the world → camera extrinsic transformation.
