@@ -65,3 +65,8 @@ Looking at the output for `cam0`:
     * The extrinsics in extrinsics_result.json follow OpenCV’s solvePnP convention: $$\mathbf{X}_C = R \mathbf{X}_W + t$$. Therefore, the translation vector `t = [-0.009, 2.096, 5.846]` does not directly represent the camera position in the world coordinate system. 
     
     * Instead, it means: The world origin [0,0,0] is located at approximately $X \approx -0.009 \text{m}$, $Y \approx 2.10 \text{m}$, and $Z \approx 5.85 \text{m}$ expressed in Cam0’s camera coordinate frame. This corresponds to the world → camera extrinsic transformation.
+
+* **Camera Pose in the Common World Coordinate System**
+    * To obtain the camera pose (position and orientation) in the common world coordinate system, the extrinsic transformation must be inverted.
+    * The camera centre in world coordinates is given by: $${C}_W = -{R}^T t $$. For Cam0, this yields: `$${C}_W \approx (-1.692, -1.956, 5.646) m$$`
+    * This means: Cam0 is located at approximately `(−1.69,−1.96,5.65)` metres in the same world coordinate system used by points_3d.
