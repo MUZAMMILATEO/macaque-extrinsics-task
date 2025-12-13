@@ -37,7 +37,7 @@ The script will generate the output file `extrinsics_result.json`.
 
 ## Explanation of Extrinsic Results
 
-The file `extrinsics_result.json` contains the pose (position and orientation) of each camera in the common world coordinate system.
+The file `extrinsics_result.json` contains the extrinsic transformation from the common world coordinate system to each camera’s coordinate system.
 
 ### A. The Coordinate System
 
