@@ -72,6 +72,6 @@ Looking at the output for `cam0`:
     * This means: Cam0 is located at approximately `(−1.69,−1.96,5.65)` metres in the same world coordinate system used by points_3d.
 
 * **Interpretation of the Checkerboard Plane at Z=3.0 m**
-    * In `observations.json`, all checkerboard vertices lie on the plane: $${Z}_W = 3.0$$m. This defines the placement of the calibration target in the world frame.
+    * In `observations.json`, all checkerboard vertices lie on the plane: $${Z}_W = 3.0$$ m. This defines the placement of the calibration target in the world frame.
     * However, the reported $${t}_z \approx 5.85$$ should not be interpreted as the camera’s distance to the checkerboard.
     * If an approximate distance along the world Z-axis is desired, it can be computed from the camera centre: distance to plane $$\approx |{C}_{W,z} - 3| = |5.646 -3| \approx 2.65$$m
